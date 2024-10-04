@@ -2,7 +2,6 @@ import { client } from "../utils/db";
 import {
   addCategory,
   addSubtree,
-  fetchCategoryById,
   removeCategory,
   moveSubtree
 } from './category.service'; 
