@@ -8,6 +8,4 @@ export const client = new Client({
     database: 'Trustscrow',
 });
 
-client.connect().then(() => {
-    console.log("Connected to the database");
-}).catch(err => console.error("Database connection error", err));
+client.connect();

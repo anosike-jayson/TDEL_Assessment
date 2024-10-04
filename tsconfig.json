@@ -1,20 +1,14 @@
 {
-  "compilerOptions": {
-      "target": "ES2020",                       // Specify ECMAScript target version
-      "module": "commonjs",                     // Specify module code generation
-      "rootDir": "./src",                       // Specify the root directory of input files
-      "outDir": "./dist",                       // Redirect output structure to the `dist` directory
-      "strict": true,                           // Enable all strict type-checking options
-      "esModuleInterop": true,                  // Enables emit interoperability between CommonJS and ES Modules
-      "skipLibCheck": true,                     // Skip type checking of declaration files
-      "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references to the same file
-      "noImplicitAny": true                     // Raise error on expressions and declarations with an implied 'any' type
-  },
-  "include": [
-      "src/**/*"                                 // Include all files in the `src` directory
-  ],
-  "exclude": [
-      "node_modules",                            // Exclude the `node_modules` directory
-      "dist"                                     // Exclude the `dist` directory from TypeScript compilation
-  ]
-}
+    "compilerOptions": {
+      "target": "ES6", 
+      "module": "commonjs",
+      "outDir": "./dist", 
+      "rootDir": "./src", 
+      "strict": true,
+      "esModuleInterop": true, 
+      "skipLibCheck": true
+    },
+    "include": ["src/**/*"], 
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
+  

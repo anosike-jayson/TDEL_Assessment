@@ -73,15 +73,14 @@ export async function handleRemoveCategory(req: Request, res: Response): Promise
 export async function handleMoveSubtree(req: Request, res: Response): Promise<void> {
     const newParentId = Number(req.params.newParentId);
     const { id } = req.body; 
-
     if (!id || !newParentId) {
         res.status(400).send("Both category ID and new parent ID are required");
         return;
     }
 
     try {
-        await moveSubtree(Number(id), newParentId);
-        res.status(200).end("Subtree moved successfully");
+        await moveSubtree(Number(id), newParentId); 
+        res.status(200).send("Subtree moved successfully"); 
     } catch (err) {
         console.error(err);
         res.status(500).send("Failed to move subtree");
