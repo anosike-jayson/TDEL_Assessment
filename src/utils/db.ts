@@ -1,5 +1,6 @@
+import * as dotenv from 'dotenv';
+dotenv.config();
 import { Client } from 'pg';
-
 export const client = new Client({
     host: 'localhost',
     port: 5432,
